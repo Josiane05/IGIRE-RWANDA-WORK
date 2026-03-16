@@ -1,91 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Survey Form</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.CSS">
 </head>
-
 <body>
+    <div class="container">
+        <header>
+            <h1 id="title">Tech Community Survey</h1>
+            <p id="description">Help us understand the landscape of modern development!</p>
+        </header>
 
-<h1 id="title">Gym Member Survey</h1>
-<p id="description">Please help us improve our gym services by filling this form.</p>
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
 
-<form id="survey-form">
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
 
-<label id="name-label" for="name">Name</label>
-<input 
-type="text" 
-id="name" 
-placeholder="Enter your name" 
-required>
+            <div class="form-group">
+                <label id="number-label" for="number">Age (optional)</label>
+                <input type="number" id="number" min="10" max="99" placeholder="Age">
+            </div>
 
-<label id="email-label" for="email">Email</label>
-<input 
-type="email" 
-id="email" 
-placeholder="Enter your email" 
-required>
+            <div class="form-group">
+                <p>Which option best describes your current role?</p>
+                <select id="dropdown" required>
+                    <option disabled selected value>Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="job">Full Time Job</option>
+                    <option value="learner">Full Time Learner</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
 
-<label id="number-label" for="number">Age</label>
-<input 
-type="number" 
-id="number" 
-min="10" 
-max="80" 
-placeholder="Enter your age">
+            <div class="form-group">
+                <p>Would you recommend this path to a friend?</p>
+                <label><input name="user-recommend" value="definitely" type="radio" class="input-radio" checked> Definitely</label>
+                <label><input name="user-recommend" value="maybe" type="radio" class="input-radio"> Maybe</label>
+                <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio"> Not sure</label>
+            </div>
 
-<label for="dropdown">How often do you visit the gym?</label>
-<select id="dropdown">
-<option value="">Select an option</option>
-<option value="daily">Daily</option>
-<option value="weekly">Weekly</option>
-<option value="monthly">Monthly</option>
-</select>
+            <div class="form-group">
+                <p>What would you like to see improved? <span class="clue">(Check all that apply)</span></p>
+                <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox"> Front-end Projects</label>
+                <label><input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox"> Back-end Projects</label>
+                <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox"> Data Visualization</label>
+            </div>
 
-<p>Membership Type</p>
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea id="comments" name="comment" placeholder="Enter your comment here..."></textarea>
+            </div>
 
-<label>
-<input type="radio" name="membership" value="basic">
-Basic
-</label>
-
-<label>
-<input type="radio" name="membership" value="premium">
-Premium
-</label>
-
-<p>Facilities you use</p>
-
-<label>
-<input type="checkbox" value="weights">
-Weights
-</label>
-
-<label>
-<input type="checkbox" value="cardio">
-Cardio Machines
-</label>
-
-<label>
-<input type="checkbox" value="yoga">
-Yoga
-</label>
-
-<label>
-<input type="checkbox" value="swimming">
-Swimming Pool
-</label>
-
-<p>Additional Comments</p>
-
-<textarea placeholder="Write your comments here..."></textarea>
-
-<br><br>
-
-<button id="submit" type="submit">Submit</button>
-
-</form>
-
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
