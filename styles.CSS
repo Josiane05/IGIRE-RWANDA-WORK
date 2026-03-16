@@ -12,6 +12,7 @@ body {
     background-attachment: fixed;
     color: var(--color-white);
     margin: 0;
+    font-size: 1.125rem;
 }
 
 .container {
